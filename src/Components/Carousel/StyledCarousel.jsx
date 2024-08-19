@@ -45,7 +45,7 @@ export const StyledPointerRigth = styled(IoIosArrowBack)`
   height: 2.5rem;
   width: 2.5rem;
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(50%);
   rotate: 180deg;

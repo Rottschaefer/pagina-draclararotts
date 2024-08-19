@@ -13,7 +13,7 @@ export const ServicesPage = () => {
   return (
     <StyledServices>
       <StyledTitle>ATENDIMENTOS</StyledTitle>
-      <Carousel imgs={imgs} imgWidth={380} />
+      <Carousel imgs={imgs} imgWidth={350} />
     </StyledServices>
   );
 };
