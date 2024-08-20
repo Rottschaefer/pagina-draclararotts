@@ -2,13 +2,11 @@ import styled from "styled-components";
 import { IoIosArrowBack } from "react-icons/io";
 
 export const StyledCarouselConteiner = styled.div`
-  overflow-x: hidden;
-
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 2rem 2rem;
-  width: 90vw;
+  width: 100vw;
   height: auto;
 `;
 export const StyledCarouselDiv = styled.div`
@@ -22,7 +20,6 @@ export const StyledCarouselDiv = styled.div`
   height: auto;
 `;
 export const StyledPhotosConteiner = styled.div`
-  /* width: 90%; */
   display: flex;
   justify-content: start;
   align-items: center;
@@ -34,19 +31,13 @@ export const StyledPointerLeft = styled(IoIosArrowBack)`
   color: white;
   height: 2.5rem;
   width: 2.5rem;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
 `;
 
 export const StyledPointerRigth = styled(IoIosArrowBack)`
   color: white;
   height: 2.5rem;
   width: 2.5rem;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(50%);
+  margin-left: 15px;
+
   rotate: 180deg;
 `;

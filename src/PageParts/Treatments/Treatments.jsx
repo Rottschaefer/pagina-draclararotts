@@ -1,7 +1,7 @@
-import { StyledServices, StyledTitle } from "./StyledServices";
+import { StyledServices, StyledTitle } from "./StyledTreatments";
 import { Carousel } from "../../Components/Carousel/Carousel";
 
-export const ServicesPage = () => {
+export const TreatmentsPage = () => {
   const imgs = [
     "https://picsum.photos/350/300",
     "https://picsum.photos/350/300",
@@ -11,7 +11,7 @@ export const ServicesPage = () => {
   ];
   return (
     <StyledServices>
-      <StyledTitle>ATENDIMENTOS</StyledTitle>
+      <StyledTitle>TRATAMENTOS</StyledTitle>
       <Carousel imgs={imgs} imgWidth={350} />
     </StyledServices>
   );

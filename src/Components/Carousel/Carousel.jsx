@@ -25,17 +25,13 @@ export const Carousel = ({ imgs, imgWidth }) => {
   };
   return (
     <StyledCarouselConteiner>
+      <StyledPointerLeft onClick={() => handleSlide(1)} />
       <StyledCarouselDiv>
-        <StyledPointerLeft onClick={() => handleSlide(1)}>
-          CLick
-        </StyledPointerLeft>
         <StyledPhotosConteiner x={xPosition}>
           {ImagesComponent}
         </StyledPhotosConteiner>
-        <StyledPointerRigth onClick={() => handleSlide(-1)}>
-          CLick
-        </StyledPointerRigth>
       </StyledCarouselDiv>
+      <StyledPointerRigth onClick={() => handleSlide(-1)} />
     </StyledCarouselConteiner>
   );
 };
