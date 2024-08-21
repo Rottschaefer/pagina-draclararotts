@@ -4,20 +4,14 @@ import background from "../../assets/perfil-2.png";
 export const StyledBeggining = styled.div`
   position: relative;
   width: 100vw;
-  height: 120vh;
+  height: 80vh;
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 60% 20%;
+  background-position: 60% 0%;
 `;
 
 export const StyledTitleDiv = styled.div`
-  /* @media (max-width: 550px) {
-    font-size: 0.9rem;
-  }
-  @media (min-width: 550px) {
-    font-size: 1rem;
-  } */
   color: #fdf7e7;
   padding: 1rem;
   display: flex;
@@ -27,7 +21,7 @@ export const StyledTitleDiv = styled.div`
   font-size: clamp(1rem, 2.5vw, 1.7rem);
   position: absolute;
 
-  top: 33%;
+  top: clamp(35%, 25vw, 50%);
   left: 31%;
   transform: translate(-50%, -50%);
   width: 55vw;
@@ -35,7 +29,6 @@ export const StyledTitleDiv = styled.div`
 `;
 
 export const StyledTitle = styled.h2`
-  /* white-space: nowrap; */
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -48,4 +41,5 @@ export const StyledButton = styled.button`
   border: none;
   padding: 1rem;
   margin-top: 1rem;
+  color: black;
 `;
