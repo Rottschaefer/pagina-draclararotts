@@ -2,12 +2,15 @@ import { useState } from "react";
 import {
   StyledCarouselConteiner,
   StyledCarouselDiv,
+  StyledDiv,
+  StyledImg,
   StyledPhotosConteiner,
   StyledPointerLeft,
   StyledPointerRigth,
+  StyledTitle,
 } from "./StyledCarousel";
 
-export const Carousel = ({ imgs, imgWidth }) => {
+export const Carousel = ({ imgs, imgWidth, Title }) => {
   const [xPosition, setXPosition] = useState(0);
 
   const ImagesComponent = imgs.map((img, id) => <img src={img} key={id} />);
@@ -19,18 +22,21 @@ export const Carousel = ({ imgs, imgWidth }) => {
     } else if (dir == -1 && xPosition <= -1 * imgWidth * (imgs.length - 1)) {
       setXPosition(0);
     } else {
-      //   setXPosition(dir * (xPosition + imgWidth));
       setXPosition(xPosition + dir * (imgWidth + 35));
     }
   };
   return (
     <StyledCarouselConteiner>
       <StyledPointerLeft onClick={() => handleSlide(1)} />
-      <StyledCarouselDiv>
-        <StyledPhotosConteiner x={xPosition}>
-          {ImagesComponent}
-        </StyledPhotosConteiner>
-      </StyledCarouselDiv>
+      <StyledDiv>
+        <StyledTitle>{Title}</StyledTitle>
+
+        <StyledCarouselDiv>
+          <StyledPhotosConteiner x={xPosition}>
+            {ImagesComponent}
+          </StyledPhotosConteiner>
+        </StyledCarouselDiv>
+      </StyledDiv>
       <StyledPointerRigth onClick={() => handleSlide(-1)} />
     </StyledCarouselConteiner>
   );

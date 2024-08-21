@@ -1,4 +1,4 @@
-import { StyledServices, StyledTitle } from "./StyledTreatments";
+import { StyledServices } from "./StyledTreatments";
 import { Carousel } from "../../Components/Carousel/Carousel";
 
 export const TreatmentsPage = () => {
@@ -11,8 +11,7 @@ export const TreatmentsPage = () => {
   ];
   return (
     <StyledServices>
-      <StyledTitle>TRATAMENTOS</StyledTitle>
-      <Carousel imgs={imgs} imgWidth={350} />
+      <Carousel imgs={imgs} imgWidth={350} Title={"TRATAMENTOS"} />
     </StyledServices>
   );
 };
