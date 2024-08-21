@@ -9,9 +9,8 @@ export const Beggining = () => {
   return (
     <StyledBeggining>
       <StyledTitleDiv>
-        <StyledTitle>
-          {"O caminho para o seu bem-estar começa aqui".toLocaleUpperCase()}
-        </StyledTitle>
+        <StyledTitle>{"O caminho para o seu".toLocaleUpperCase()}</StyledTitle>
+        <StyledTitle>{"bem-estar começa aqui".toLocaleUpperCase()}</StyledTitle>
         <StyledButton>AGENDE UMA CONSULTA</StyledButton>
       </StyledTitleDiv>
     </StyledBeggining>

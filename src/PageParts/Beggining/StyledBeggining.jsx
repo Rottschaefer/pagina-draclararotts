@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import background from "../../assets/perfil.png";
+import background from "../../assets/perfil-2.png";
 
 export const StyledBeggining = styled.div`
   position: relative;
@@ -8,60 +8,44 @@ export const StyledBeggining = styled.div`
   background-image: url(${background});
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 20%;
+  background-position: 60% 20%;
 `;
 
 export const StyledTitleDiv = styled.div`
+  /* @media (max-width: 550px) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: 550px) {
+    font-size: 1rem;
+  } */
+  color: #fdf7e7;
   padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  @media (max-width: 1000px) {
-    font-size: 0.8rem;
-    top: 39%;
-    left: 28%;
-    transform: translate(-50%, -50%);
-    width: 44vw;
-    max-width: 300px;
-  }
-  @media (min-width: 1001px) and (max-width: 1200px) {
-    font-size: 1.6rem;
-
-    top: 44%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    width: 44vw;
-  }
+  font-size: clamp(1rem, 2.5vw, 1.7rem);
   position: absolute;
-  font-size: 1.6rem;
 
-  top: 58%;
-  left: 28%;
+  top: 33%;
+  left: 31%;
   transform: translate(-50%, -50%);
-  width: 44vw;
+  width: 55vw;
   height: auto;
 `;
 
 export const StyledTitle = styled.h2`
-  /* @media (max-width: 1000px) {
-    font-size: 1.3rem;
-  } */
-  /* font-size: 1.5rem; */
+  /* white-space: nowrap; */
   font-weight: 400;
   text-align: center;
+  margin: 0;
 `;
 
 export const StyledButton = styled.button`
-  @media (max-width: 400px) {
-    /* width: 35vw; */
-  }
-  /* min-width: 200px; */
-  /* width: 15vw; */
+  font-size: clamp(0.7rem, 2.5vw, 0.8rem);
   height: auto;
-  background-color: #a4bd2e;
+  background-color: #d7be98;
   border: none;
-  padding: 0.7rem;
-  /* font-size: 0.8rem; */
+  padding: 1rem;
+  margin-top: 1rem;
 `;
