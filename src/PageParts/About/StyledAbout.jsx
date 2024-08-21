@@ -27,7 +27,7 @@ export const StyledDescriptionDiv = styled.div`
   align-items: start;
   max-width: 400px;
   width: 80vw;
-  height: 400px;
+  min-height: 400px;
 `;
 
 export const StyledDescription = styled.p`

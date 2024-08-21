@@ -13,7 +13,9 @@ import {
 export const Carousel = ({ imgs, imgWidth, Title }) => {
   const [xPosition, setXPosition] = useState(0);
 
-  const ImagesComponent = imgs.map((img, id) => <img src={img} key={id} />);
+  const ImagesComponent = imgs.map((img, id) => (
+    <StyledImg src={img} key={id} />
+  ));
 
   const handleSlide = (dir) => {
     console.log("2efc");

@@ -20,7 +20,7 @@ export const StyledCarouselDiv = styled.div`
   justify-content: start;
   align-items: center;
   padding: 2rem 2rem;
-  width: 90vw;
+  width: 70vw;
   height: auto;
 `;
 export const StyledPhotosConteiner = styled.div`
@@ -35,8 +35,8 @@ export const StyledPhotosConteiner = styled.div`
 `;
 export const StyledPointerLeft = styled(IoIosArrowBack)`
   color: white;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   display: flex; /* Garante que o ícone não seja distorcido */
   align-items: center; /* Centraliza o ícone verticalmente */
   justify-content: center;
@@ -44,8 +44,8 @@ export const StyledPointerLeft = styled(IoIosArrowBack)`
 
 export const StyledPointerRigth = styled(IoIosArrowBack)`
   color: white;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   margin-left: 15px;
 
   rotate: 180deg;
@@ -54,6 +54,7 @@ export const StyledPointerRigth = styled(IoIosArrowBack)`
 export const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
+  /* width: 30%; */
 `;
 
 export const StyledTitle = styled.h2`
@@ -64,10 +65,11 @@ export const StyledTitle = styled.h2`
   margin-top: 3rem;
   font-size: 2rem;
   top: 0;
+  /* left: 2rem; */
 `;
 
 export const StyledImg = styled.img`
-  width: 500%;
-  height: auto;
-  object-fit: contain;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
 `;
