@@ -8,15 +8,19 @@ export const StyledHeader = styled.header`
   height: ${(props) => (props.isScrolled ? "15vh" : "25vh")};
   background-color: #fdf7e7;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${(props) =>
+    props.isScrolled ? "center" : "space-between"};
   align-items: center;
   padding: 0rem 2rem;
   z-index: 3;
   transition: all 1s;
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const StyledOptionsDiv = styled.nav`
-  display: flex;
+  display: ${(props) => (props.isScrolled ? "none" : "flex")};
   align-items: end;
   gap: 2rem;
   width: auto;
@@ -26,9 +30,17 @@ export const StyledOptionsDiv = styled.nav`
   @media (max-width: 600px) {
     display: none;
   }
+
+  transition: all 1s;
 `;
 
 export const StyledNavOption = styled.h2`
   font-size: 1rem;
   font-weight: 400;
+`;
+
+export const StyledLogo = styled.img`
+  width: ${(props) => (props.isScrolled ? "170px" : "250px")};
+  height: auto;
+  transition: all 1s;
 `;

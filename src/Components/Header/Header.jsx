@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import {
   StyledHeader,
+  StyledLogo,
   StyledNavOption,
   StyledOptionsDiv,
 } from "./StyledHeader";
+
+import logo from "../../assets/logo-1.png";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,8 +30,10 @@ export const Header = () => {
   ));
   return (
     <StyledHeader isScrolled={isScrolled}>
-      <p>Dra Clara Rotts</p>
-      <StyledOptionsDiv>{NavOptionsComponent}</StyledOptionsDiv>
+      <StyledLogo src={logo} isScrolled={isScrolled} />
+      <StyledOptionsDiv isScrolled={isScrolled}>
+        {NavOptionsComponent}
+      </StyledOptionsDiv>
     </StyledHeader>
   );
 };
