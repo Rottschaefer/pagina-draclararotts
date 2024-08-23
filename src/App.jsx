@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Beggining />
       <ServicesPage />
-      <TreatmentsPage />
+      {/* <TreatmentsPage /> */}
       {/* <GaleryPage /> */}
       <AboutPage />
     </>
