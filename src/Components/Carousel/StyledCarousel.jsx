@@ -33,16 +33,31 @@ export const StyledPhotosConteiner = styled.div`
   margin-left: ${(props) => `${props.x}px`};
   transition: all 1s;
 `;
+
+export const StyledServiceDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const StyledServiceDescription = styled.h2`
+  font-weight: 100;
+  font-size: 1.1rem;
+  color: #fdf7e7;
+`;
 export const StyledPointerLeft = styled(IoIosArrowBack)`
   color: white;
   height: 50px;
   width: 50px;
-  display: flex; /* Garante que o ícone não seja distorcido */
-  align-items: center; /* Centraliza o ícone verticalmente */
+  display: flex;
+  align-items: center;
   justify-content: center;
+  transform: translateY(-50%);
 `;
 
 export const StyledPointerRigth = styled(IoIosArrowBack)`
+  transform: translateY(50%);
+
   color: white;
   height: 50px;
   width: 50px;
@@ -54,7 +69,6 @@ export const StyledPointerRigth = styled(IoIosArrowBack)`
 export const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
-  /* width: 30%; */
 `;
 
 export const StyledTitle = styled.h2`
@@ -63,9 +77,8 @@ export const StyledTitle = styled.h2`
   color: #fdf7e7;
   align-self: flex-start;
   margin-top: 3rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   top: 0;
-  /* left: 2rem; */
 `;
 
 export const StyledImg = styled.img`

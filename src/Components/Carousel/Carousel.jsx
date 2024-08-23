@@ -7,6 +7,8 @@ import {
   StyledPhotosConteiner,
   StyledPointerLeft,
   StyledPointerRigth,
+  StyledServiceDescription,
+  StyledServiceDiv,
   StyledTitle,
 } from "./StyledCarousel";
 
@@ -14,7 +16,12 @@ export const Carousel = ({ imgs, imgWidth, Title }) => {
   const [xPosition, setXPosition] = useState(0);
 
   const ImagesComponent = imgs.map((img, id) => (
-    <StyledImg src={img} key={id} />
+    <StyledServiceDiv key={id}>
+      <StyledImg src={img[0]} />
+      <StyledServiceDescription>
+        {img[1].toUpperCase()}
+      </StyledServiceDescription>
+    </StyledServiceDiv>
   ));
 
   const handleSlide = (dir) => {

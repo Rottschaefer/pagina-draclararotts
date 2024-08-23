@@ -18,17 +18,21 @@ export const StyledTitleDiv = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  font-size: clamp(0.7rem, 1.7vw, 1.7rem);
   position: absolute;
 
   top: clamp(35%, 25vw, 50%);
-  left: 31%;
+  left: 34%;
   transform: translate(-50%, -50%);
-  width: 55vw;
+  width: 63vw;
   height: auto;
 `;
 
 export const StyledTitle = styled.h2`
+  @media (max-width: 400) {
+    letter-spacing: 5px;
+  }
+  letter-spacing: 8px;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -39,7 +43,7 @@ export const StyledButton = styled.button`
   height: auto;
   background-color: #d7be98;
   border: none;
-  padding: 1rem;
+  padding: 10px;
   margin-top: 1rem;
   color: black;
 `;
