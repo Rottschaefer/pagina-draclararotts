@@ -7,7 +7,6 @@ export const StyledAbout = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 3rem;
-  /* gap: 6rem; */
   width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -27,25 +26,22 @@ export const StyledDescriptionDiv = styled.div`
   align-items: start;
   max-width: 400px;
   width: 80vw;
-  min-height: 400px;
+  min-height: 350px;
 `;
 
 export const StyledDescription = styled.p`
   color: #fdf7e7;
-  /* max-width: 400px;
-  width: 80vw; */
+
   font-family: "Montserrat";
-  font-size: 1rem;
-  /* @media (max-width: 540px) {
-    font-size: 0.8rem;
-  } */
+  font-size: clamp(0.8rem, 2vw, 1rem);
   text-align: justify;
   margin: 0;
 `;
 
 export const StyledTitle = styled.h2`
   color: #fdf7e7;
-  font-size: 1.7rem;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+
   margin-bottom: 1.3rem;
   font-weight: 100;
   letter-spacing: 4px;

@@ -31,6 +31,9 @@ export const StyledPhotosConteiner = styled.div`
   align-items: center;
   gap: 30px;
   margin-left: ${(props) => `${props.x}px`};
+  @media (max-width: 400px) {
+    margin-left: ${(props) => `${(props.x - 35) * 0.8 + 18}px`}; /
+  }
   transition: all 1s;
 `;
 
@@ -41,6 +44,9 @@ export const StyledServiceDiv = styled.div`
 `;
 
 export const StyledServiceDescription = styled.h2`
+  @media (max-width: 400px) {
+    font-size: 0.8rem;
+  }
   font-weight: 100;
   font-size: 1.1rem;
   color: #fdf7e7;
@@ -82,6 +88,10 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledImg = styled.img`
+  @media (max-width: 400px) {
+    width: 200px;
+    height: auto;
+  }
   width: 250px;
   height: 300px;
   object-fit: cover;
