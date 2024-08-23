@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   position: -webkit-sticky;
   top: 0;
   width: 100vw;
-  height: ${(props) => (props.isScrolled ? "15vh" : "25vh")};
+  height: ${(props) => (props.isScrolled ? "10vh" : "20vh")};
   background-color: #fdf7e7;
   display: flex;
   justify-content: ${(props) =>
@@ -40,7 +40,7 @@ export const StyledNavOption = styled.h2`
 `;
 
 export const StyledLogo = styled.img`
-  width: ${(props) => (props.isScrolled ? "170px" : "250px")};
+  width: ${(props) => (props.isScrolled ? "120px" : "200px")};
   height: auto;
   transition: all 1s;
 `;
