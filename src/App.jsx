@@ -3,8 +3,8 @@ import GlobalStyle from "./GlobalStyle";
 import { AboutPage } from "./PageParts/About/About";
 import { Beggining } from "./PageParts/Beggining/Beggining";
 import { GaleryPage } from "./PageParts/Galery/Galery";
+import { LocationPage } from "./PageParts/Location/Location";
 import { ServicesPage } from "./PageParts/Services/Services";
-import { TreatmentsPage } from "./PageParts/Treatments/Treatments";
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Beggining />
       <ServicesPage />
-      {/* <TreatmentsPage /> */}
       <GaleryPage />
       <AboutPage />
+      <LocationPage />
     </>
   );
 }

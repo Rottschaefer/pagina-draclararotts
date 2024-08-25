@@ -28,6 +28,10 @@ export const StyledDescriptionDiv = styled.div`
   max-width: 400px;
   width: 80vw;
   min-height: 350px;
+
+  @media (max-width: 890px) {
+    justify-content: flex-start;
+  }
 `;
 
 export const StyledDescription = styled.p`
