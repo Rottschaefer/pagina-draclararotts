@@ -5,7 +5,7 @@ export const StyledHeader = styled.header`
   position: -webkit-sticky;
   top: 0;
   width: 100vw;
-  height: ${(props) => (props.isScrolled ? "20vh" : "30vh")};
+  height: ${(props) => (props.isScrolled ? "15vh" : "30vh")};
 
   background-color: #fdf7e7;
   display: flex;

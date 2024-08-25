@@ -14,7 +14,7 @@ function App() {
       <Beggining />
       <ServicesPage />
       {/* <TreatmentsPage /> */}
-      {/* <GaleryPage /> */}
+      <GaleryPage />
       <AboutPage />
     </>
   );
