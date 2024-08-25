@@ -19,6 +19,7 @@ export const StyledBeggining = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 0%;
+  overflow-x: hidden;
 `;
 
 export const StyledTitleDiv = styled.div`
