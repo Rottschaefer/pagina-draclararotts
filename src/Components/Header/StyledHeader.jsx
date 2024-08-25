@@ -5,7 +5,8 @@ export const StyledHeader = styled.header`
   position: -webkit-sticky;
   top: 0;
   width: 100vw;
-  height: ${(props) => (props.isScrolled ? "10vh" : "20vh")};
+  height: ${(props) => (props.isScrolled ? "20vh" : "30vh")};
+
   background-color: #fdf7e7;
   display: flex;
   justify-content: ${(props) =>
@@ -15,6 +16,8 @@ export const StyledHeader = styled.header`
   z-index: 3;
   transition: all 1s;
   @media (max-width: 600px) {
+    height: ${(props) => (props.isScrolled ? "10vh" : "15vh")};
+
     justify-content: center;
   }
 `;
@@ -35,12 +38,16 @@ export const StyledOptionsDiv = styled.nav`
 `;
 
 export const StyledNavOption = styled.h2`
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 400;
+  letter-spacing: 5px;
 `;
 
 export const StyledLogo = styled.img`
-  width: ${(props) => (props.isScrolled ? "120px" : "200px")};
+  @media (max-width: 600px) {
+    width: ${(props) => (props.isScrolled ? "120px" : "250px")};
+  }
+  width: ${(props) => (props.isScrolled ? "180px" : "350px")};
   height: auto;
   transition: all 1s;
 `;

@@ -13,7 +13,7 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 75) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -23,7 +23,7 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const navOptions = ["ATENDIMENTO", "SOBRE", "GALERIA", "CONTATO"];
+  const navOptions = ["TRATAMENTOS", "SOBRE", "INSTAGRAM", "CONTATO"];
 
   const NavOptionsComponent = navOptions.map((option, id) => (
     <StyledNavOption key={id}>{option}</StyledNavOption>
