@@ -20,11 +20,12 @@ export const AboutPage = () => {
           carinho de seus quatro gatos. Ela concluiu o curso de Medicina na
           Universidade Federal do Estado do Rio de Janeiro (UNIRIO) em julho de
           2021. Desde então, Clara dedicou-se à prática médica em Emergências
-          Clínicas de adultos, Clínica da Família e unidades de internação. No
-          momento, Clara oferece seus conhecimentos como clínica geral em Icaraí
-          e Ipanema ou na casa de seus pacientes. Melhorar a qualidade de vida
-          de seus pacientes e oferecer um cuidado que vai além das expectativas
-          são suas prioridades.
+          Clínicas de adultos, Clínica da Família e unidades de internação.
+          <br />
+          No momento, Clara oferece seus conhecimentos como clínica geral em
+          Icaraí e Ipanema ou na casa de seus pacientes. Melhorar a qualidade de
+          vida de seus pacientes e oferecer um cuidado que vai além das
+          expectativas são suas prioridades.
         </StyledDescription>
       </StyledDescriptionDiv>
     </StyledAbout>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   StyledCarouselConteiner,
   StyledCarouselDiv,
@@ -14,32 +14,80 @@ import {
 
 export const Carousel = ({ imgs, imgWidth, Title }) => {
   const [xPosition, setXPosition] = useState(0);
+  const [startPos, setStartPos] = useState(0);
+  const [dragging, setDragging] = useState(false);
+
+  const gap = 40; // gap entre as imagens
+  const totalImgs = imgs.length;
+  const carouselWidth = imgWidth * totalImgs + gap * (totalImgs - 1);
+  const visibleWidth = (70 * window.innerWidth) / 100; // 70vw como na estilização do carrossel
+
+  const maxOffset = Math.min(0, visibleWidth - carouselWidth);
 
   const ImagesComponent = imgs.map((img, id) => (
     <StyledServiceDiv key={id}>
-      <StyledImg src={img[0]} />
+      <StyledImg src={img[0]} alt={img[1]} />
       <StyledServiceDescription>
         {img[1].toUpperCase()}
       </StyledServiceDescription>
     </StyledServiceDiv>
   ));
 
-  const handleSlide = (dir) => {
-    if (dir == 1 && xPosition == 0) {
-      setXPosition(-1 * (imgWidth + 35) * (imgs.length - 1));
-    } else if (dir == -1 && xPosition <= -1 * imgWidth * (imgs.length - 1)) {
-      setXPosition(0);
-    } else {
-      setXPosition(xPosition + dir * (imgWidth + 35));
+  const handleDragStart = (e) => {
+    setStartPos(e.clientX || e.touches[0].clientX);
+    setDragging(true);
+  };
+
+  const handleDragMove = (e) => {
+    if (dragging) {
+      const currentPos = e.clientX || e.touches[0].clientX;
+      const move = currentPos - startPos;
+      setXPosition((prevPosition) => {
+        let newPosition = prevPosition + move;
+        if (newPosition > 0) {
+          newPosition = 0;
+        } else if (newPosition < maxOffset) {
+          newPosition = maxOffset;
+        }
+        return newPosition;
+      });
+      setStartPos(currentPos);
+      setTimeout(() => {
+        setDragging(false);
+      }, 1000);
     }
   };
+
+  const handleDragEnd = () => {
+    setDragging(false);
+  };
+
+  const handleSlide = (dir) => {
+    setXPosition((prevPosition) => {
+      let newPosition = prevPosition + dir * (imgWidth + gap);
+      if (newPosition > 0) {
+        newPosition = 0;
+      } else if (newPosition < maxOffset) {
+        newPosition = maxOffset;
+      }
+      return newPosition;
+    });
+  };
+
   return (
     <StyledCarouselConteiner>
       <StyledPointerLeft onClick={() => handleSlide(1)} />
       <StyledDiv>
         <StyledTitle>{Title}</StyledTitle>
-
-        <StyledCarouselDiv>
+        <StyledCarouselDiv
+          onMouseDown={handleDragStart}
+          onTouchStart={handleDragStart}
+          onMouseMove={handleDragMove}
+          onTouchMove={handleDragMove}
+          onMouseUp={handleDragEnd}
+          onMouseLeave={handleDragEnd}
+          onTouchEnd={handleDragEnd}
+        >
           <StyledPhotosConteiner x={xPosition}>
             {ImagesComponent}
           </StyledPhotosConteiner>

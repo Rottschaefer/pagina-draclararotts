@@ -4,7 +4,8 @@ export const StyledAbout = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
   align-items: center;
   padding: 3rem;
   width: 100vw;
@@ -15,7 +16,7 @@ export const StyledAbout = styled.div`
 
 export const StyledPhoto = styled.img`
   width: 350px;
-  height: 400px;
+  height: auto;
   object-fit: cover;
 `;
 
@@ -33,7 +34,7 @@ export const StyledDescription = styled.p`
   color: #fdf7e7;
 
   font-family: "Montserrat";
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 0.8rem);
   text-align: justify;
   margin: 0;
 `;
