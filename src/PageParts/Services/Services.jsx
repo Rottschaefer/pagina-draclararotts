@@ -17,7 +17,7 @@ export const ServicesPage = () => {
     [img6, "exames de rotina"],
   ];
   return (
-    <StyledServices>
+    <StyledServices id="TRATAMENTOS">
       <Carousel imgs={imgs} imgWidth={250} Title={"TRATAMENTOS"} />
     </StyledServices>
   );

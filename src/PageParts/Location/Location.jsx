@@ -10,7 +10,7 @@ import {
 
 export const LocationPage = () => {
   return (
-    <StyledServices>
+    <StyledServices id="CONTATO">
       <StyledInfoDiv>
         <StyledContactDiv>
           <StyledContactTitle>CONTATO</StyledContactTitle>

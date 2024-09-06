@@ -37,10 +37,13 @@ export const StyledOptionsDiv = styled.nav`
   transition: all 1s;
 `;
 
-export const StyledNavOption = styled.h2`
+export const StyledNavOption = styled.a`
+  color: black;
+  text-decoration: none;
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 5px;
+  cursor: pointer;
 `;
 
 export const StyledLogo = styled.img`

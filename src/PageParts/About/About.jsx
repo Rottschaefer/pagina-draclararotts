@@ -9,7 +9,7 @@ import photo from "../../assets/about-photo.png";
 
 export const AboutPage = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="SOBRE">
       {" "}
       <StyledPhoto src={photo} />
       <StyledDescriptionDiv>
