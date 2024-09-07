@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - master
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: Deploy on Hostinger FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: 📂 Build Project
+        env:
+          VITE_META_ACESS_TOKEN: ${{ secrets.TOKEN_INSTA }}
+
+        run: npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp://draclara.com
+          username: u197982642
+          password: ${{ secrets.ftp_password }}
+          local-dir: dist/
+          server-dir: /public_html/
