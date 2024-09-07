@@ -28,7 +28,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp://draclara.com
+          server: ftp://82.112.247.133
           username: u197982642
           password: ${{ secrets.ftp_password }}
           local-dir: dist/
