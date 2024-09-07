@@ -25,7 +25,11 @@ export const GaleryPage = () => {
         );
 
         const newImages = [];
-        for (let i = 0; i < 6; i++) {
+
+        const imgsQuant = window.innerWidth > 675 ? 6 : 3;
+
+        console.log();
+        for (let i = 0; i < imgsQuant; i++) {
           newImages.push({
             url: images[i].media_url,
             link: images[i].permalink,
@@ -42,7 +46,7 @@ export const GaleryPage = () => {
   }, []);
 
   return (
-    <StyledServices>
+    <StyledServices id="INSTAGRAM">
       <StyledDiv>
         <StyledTitle>INSTAGRAM</StyledTitle>
 

@@ -41,7 +41,7 @@ export const Carousel = ({ imgs, imgWidth, Title }) => {
   const handleDragMove = (e) => {
     if (dragging) {
       const currentPos = e.clientX || e.touches[0].clientX;
-      const move = currentPos - startPos;
+      const move = (currentPos - startPos) * 4;
       setXPosition((prevPosition) => {
         let newPosition = prevPosition + move;
         if (newPosition > 0) {

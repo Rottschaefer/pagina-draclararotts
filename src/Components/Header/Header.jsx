@@ -26,7 +26,9 @@ export const Header = () => {
   const navOptions = ["TRATAMENTOS", "SOBRE", "INSTAGRAM", "CONTATO"];
 
   const NavOptionsComponent = navOptions.map((option, id) => (
-    <StyledNavOption key={id}>{option}</StyledNavOption>
+    <StyledNavOption key={id} href={`#${option}`}>
+      {option}
+    </StyledNavOption>
   ));
   return (
     <StyledHeader isScrolled={isScrolled}>
