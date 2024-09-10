@@ -9,7 +9,7 @@ import background from "../../assets/perfil_no_back.png";
 
 export const Beggining = () => {
   return (
-    <StyledBeggining>
+    <StyledBeggining id="BEGGINING">
       {/* <StyledBackImgDiv> */}
       <StyledBackImg src={background} />
       {/* </StyledBackImgDiv> */}

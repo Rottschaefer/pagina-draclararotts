@@ -14,8 +14,9 @@ export const LocationPage = () => {
       <StyledInfoDiv>
         <StyledContactDiv>
           <StyledContactTitle>CONTATO</StyledContactTitle>
-          <StyledContactInfo>{"(21) 974747636"}</StyledContactInfo>
-          <StyledContactInfo>clara.rottschaefer@gmail.com</StyledContactInfo>
+          <StyledContactInfo>
+            {"(21) 974747636 / contato@draclara.com"}
+          </StyledContactInfo>
         </StyledContactDiv>
         <StyledContactDiv>
           <StyledContactTitle>HORÁRIO DE ATENDIMENTO</StyledContactTitle>

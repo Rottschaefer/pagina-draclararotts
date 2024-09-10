@@ -11,6 +11,14 @@ import logo from "../../assets/logo-1.png";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const handleScrollToSections = (id) => {
+    const section = document.getElementById(`${id}`);
+
+    const header = document.getElementById("HEADER");
+
+    window.scrollTo(0, section.offsetTop - header.clientHeight);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 75) {
@@ -26,12 +34,12 @@ export const Header = () => {
   const navOptions = ["TRATAMENTOS", "SOBRE", "INSTAGRAM", "CONTATO"];
 
   const NavOptionsComponent = navOptions.map((option, id) => (
-    <StyledNavOption key={id} href={`#${option}`}>
+    <StyledNavOption key={id} onClick={() => handleScrollToSections(option)}>
       {option}
     </StyledNavOption>
   ));
   return (
-    <StyledHeader isScrolled={isScrolled}>
+    <StyledHeader id="HEADER" isScrolled={isScrolled}>
       <StyledLogo src={logo} isScrolled={isScrolled} />
       <StyledOptionsDiv isScrolled={isScrolled}>
         {NavOptionsComponent}
