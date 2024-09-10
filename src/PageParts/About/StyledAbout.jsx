@@ -35,6 +35,7 @@ export const StyledDescriptionDiv = styled.div`
 `;
 
 export const StyledDescription = styled.p`
+  letter-spacing: 1px;
   color: #fdf7e7;
 
   font-family: "Montserrat";
