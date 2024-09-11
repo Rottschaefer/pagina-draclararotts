@@ -26,8 +26,9 @@ export const Beggining = () => {
         <>
           <StyledBackWidgetDiv onClick={handleClick} />
           <StyledWidgetDiv onClick={(e) => e.stopPropagation()}>
-            <DoctoraliaWidget showWidget={showWidget} />
             <StyledGoBack onClick={handleClick}>VOLTAR</StyledGoBack>
+
+            <DoctoraliaWidget showWidget={showWidget} />
           </StyledWidgetDiv>
         </>
       )}
