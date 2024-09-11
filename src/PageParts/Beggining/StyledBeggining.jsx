@@ -1,5 +1,11 @@
-import styled from "styled-components";
-import background from "../../assets/perfil-2.png";
+import styled, { keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+`;
 
 export const StyledBeggining = styled.div`
   @media (max-width: 830px) {
@@ -74,26 +80,41 @@ export const StyledButton = styled.button`
   padding: 10px;
   margin-top: 48px;
   color: black;
+  cursor: pointer;
 `;
 
 export const StyledBackImg = styled.img`
-  /* @media (max-width: 830px) {
-    height: 110%;
-  } */
-  width: auto; /* Ajuste o intervalo conforme necessário */
+  width: auto;
   height: 120%;
   object-fit: cover;
   position: absolute;
-  left: 50%; /* Ajuste a posição inicial */
+  left: 50%;
   bottom: -10%;
-  /* transform: translateX(-50%); */
 `;
 
-// export const StyledBackImgDiv = styled.div`
-//   position: absolute;
-//   left: 50%;
-//   bottom: -10%;
-//   transform: translateX(-50%);
-//   width: clamp(20vw, 40vw, 60vw); /* Reduz gradualmente o tamanho da div */
-//   height: auto;
-// `;
+export const StyledWidgetDiv = styled.div`
+  opacity: 1;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  height: 85vh;
+  width: 90vw;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  overflow: auto;
+  transition: all 1s;
+  animation: ${fadeIn} 1s ease-in-out;
+`;
+
+export const StyledBackWidgetDiv = styled.div`
+  background-color: black;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  animation: ${fadeIn} 0.5s ease-in-out;
+`;
