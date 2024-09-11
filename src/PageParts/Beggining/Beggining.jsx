@@ -3,6 +3,7 @@ import {
   StyledBackWidgetDiv,
   StyledBeggining,
   StyledButton,
+  StyledGoBack,
   StyledTitle,
   StyledTitleDiv,
   StyledWidgetDiv,
@@ -26,6 +27,7 @@ export const Beggining = () => {
           <StyledBackWidgetDiv onClick={handleClick} />
           <StyledWidgetDiv onClick={(e) => e.stopPropagation()}>
             <DoctoraliaWidget showWidget={showWidget} />
+            <StyledGoBack onClick={handleClick}>VOLTAR</StyledGoBack>
           </StyledWidgetDiv>
         </>
       )}
