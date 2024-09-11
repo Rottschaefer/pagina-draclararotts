@@ -11,13 +11,20 @@ import {
 import background from "../../assets/perfil_no_back.png";
 import { WhatsAppIcon } from "../../Components/WhatsAppIcon/WhatsAppIcon";
 import { DoctoraliaWidget } from "../../Components/DoctoraliaWidget/DoctoraliaWidget";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Beggining = () => {
   const [showWidget, setShowWidget] = useState(false);
 
+  useEffect(() => console.log(window.innerHeight), []);
+
   const handleClick = () => {
-    setShowWidget(!showWidget);
+    if (window.innerHeight > 750) {
+      setShowWidget(!showWidget);
+    } else {
+      window.location.href =
+        "https://www.doctoralia.com.br/clara-rottschaefer-berto/medico-clinico-geral/niteroi?utm_id=868634&utm_source=widget-doctor-868634&utm_medium=big&utm_campaign=&utm_content=#highlight-calendar";
+    }
   };
   return (
     <StyledBeggining id="BEGGINING">

@@ -97,19 +97,24 @@ export const StyledWidgetDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding-top: 1rem; */
+  padding-top: 2rem;
   opacity: 1;
 
   position: fixed;
   left: 50%;
   top: 50%;
   height: 100vh;
-  width: 90vw;
+  min-width: 300px;
+  width: auto;
   transform: translate(-50%, -50%);
   z-index: 5;
-  overflow: auto;
+  overflow: scroll;
   transition: all 1s;
   animation: ${fadeIn} 1s ease-in-out;
+
+  @media (min-width: 600px) {
+    height: 90vh;
+  }
 `;
 
 export const StyledBackWidgetDiv = styled.div`
