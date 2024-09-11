@@ -95,9 +95,9 @@ export const StyledBackImg = styled.img`
 export const StyledWidgetDiv = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   opacity: 1;
 
   position: fixed;
@@ -127,6 +127,6 @@ export const StyledBackWidgetDiv = styled.div`
 export const StyledGoBack = styled.h2`
   color: white;
   animation: ${fadeIn} 0.5s ease-in-out;
-  margin: -7vh;
+  /* margin: -7vh; */
   cursor: pointer;
 `;
