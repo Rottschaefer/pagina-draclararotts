@@ -1,24 +1,48 @@
-import { StyledServices } from "./StyledServices";
+import {
+  StyledImg,
+  StyledImgsDiv,
+  StyledServices,
+  StyledTitle,
+} from "./StyledServices";
 import { Carousel } from "../../Components/Carousel/Carousel";
-import img1 from "../../assets/1.png";
-import img2 from "../../assets/2.png";
-import img3 from "../../assets/3.png";
-import img4 from "../../assets/4.png";
-import img5 from "../../assets/5.png";
-import img6 from "../../assets/6.png";
+import img1 from "../../assets/QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL/1.png";
+import img2 from "../../assets/QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL/2.png";
+import img3 from "../../assets/QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL/3.png";
+import img4 from "../../assets/QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL/4.png";
+import img5 from "../../assets/QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL/5.png";
 
 export const ServicesPage = () => {
-  const imgs = [
-    [img1, "dor aguda/crônica"],
-    [img2, "hipertensão"],
-    [img3, "colesterol alto"],
-    [img4, "sobrepeso/obesidade"],
-    [img5, "atendimento domiciliar"],
-    [img6, "exames de rotina"],
-  ];
   return (
     <StyledServices id="TRATAMENTOS">
-      <Carousel imgs={imgs} imgWidth={250} Title={"TRATAMENTOS"} />
+      <StyledTitle>QUANDO DEVO PROCURAR UM MÉDICO CLÍNICO GERAL?</StyledTitle>
+      <StyledImgsDiv>
+        <StyledImg
+          src={img2}
+          alt="Para investigar
+sintomas inespecíficos,
+como febre, cansaço,
+perda de apetite ou
+dor persistente."
+        />
+        <StyledImg
+          src={img3}
+          alt="Para avaliar e tratar
+alguns casos de anemia, Infecção urinária,
+colesterol alto,
+entre outras condições"
+        />
+        <StyledImg
+          src={img4}
+          alt="Para realizar exames
+de rotina (check-up),
+orientações de hábitos saudáveis e fazer uma avaliação preventiva"
+        />
+        <StyledImg
+          src={img5}
+          alt="Para avaliar  e encaminhar
+para especialistas quando necessário e coordenar o cuidado entre diferentes profissionais"
+        />
+      </StyledImgsDiv>
     </StyledServices>
   );
 };
