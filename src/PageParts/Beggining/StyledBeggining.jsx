@@ -93,12 +93,17 @@ export const StyledBackImg = styled.img`
 `;
 
 export const StyledWidgetDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 1rem;
   opacity: 1;
 
   position: fixed;
   left: 50%;
   top: 50%;
-  height: 85vh;
+  height: 100vh;
   width: 90vw;
   transform: translate(-50%, -50%);
   z-index: 5;
@@ -117,4 +122,11 @@ export const StyledBackWidgetDiv = styled.div`
   width: 100vw;
   z-index: 4;
   animation: ${fadeIn} 0.5s ease-in-out;
+`;
+
+export const StyledGoBack = styled.h2`
+  color: white;
+  animation: ${fadeIn} 0.5s ease-in-out;
+  margin: -7vh;
+  cursor: pointer;
 `;
